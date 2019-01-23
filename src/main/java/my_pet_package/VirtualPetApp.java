@@ -4,17 +4,14 @@ import java.util.Scanner;
 
 public class VirtualPetApp {
 
-	// Create variables
 	private static Scanner input = new Scanner(System.in);
 	private static VirtualPet myPet;
 
 	public static void main(String[] args) {
 
-		// Assign values
 		myPet = new VirtualPet();
 		input = new Scanner(System.in);
 
-		// Create initialize method
 		System.out.println("Polly the Pig");
 		System.out.println("Good morning! Pet's current status: ");
 		myPet.printAll();
