@@ -52,4 +52,28 @@ public class VirtualPet {
 		boredom += 2;
 		excitement += 2;
 	}
+
+	public void feed() {
+		hunger -= 2;
+		thirst += 2;
+	}
+
+	public void drink() {
+		thirst -= 2;
+
+	}
+
+	public void pee() {
+		waste -= 2;
+
+	}
+
+	public void pace() {
+		boredom -= 2;
+		
+	}
+	
+	public void squeal() {
+		excitement -= 2;
+}
 }

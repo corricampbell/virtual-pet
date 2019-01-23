@@ -24,12 +24,34 @@ public class VirtualPetApp {
 		int counter = 0;
 		while (input.hasNextInt()) {
 
-			if (input.nextInt() == 99 && counter < 2) {
-				myPet.tick();
-				counter++;
-				System.out.println("Pet's current status: ");
-				myPet.printAll();
-				if (counter == 1) {
+			if (input.nextInt() == 99 && counter < 12) {
+				System.out.println("Press 1 to Feed");
+				System.out.println("Press 2 to Give Water");
+				System.out.println("Press 3 to Use Bathroom");
+				System.out.println("Press 4 for Something To Do");
+				System.out.println("Press 5 to Get Extra Excited");
+				int animalNeeds = input.nextInt();
+				if (animalNeeds == 1) {
+					myPet.feed();
+					
+				} else if (animalNeeds == 2) {
+					myPet.drink();
+
+				} else if (animalNeeds == 3) {
+					myPet.pee();
+
+				} else if (animalNeeds == 4) {
+					myPet.pace();
+
+				} else if (animalNeeds == 5) {
+					myPet.squeal();
+					myPet.tick();
+					counter++;
+					System.out.println("Pet's current status: ");
+					myPet.printAll();
+				}
+
+				if (counter == 8) {
 					System.out.println("Happy afternoon!");
 				} else {
 					System.out.println("Day is over...Good-night!");
@@ -37,25 +59,5 @@ public class VirtualPetApp {
 				}
 			}
 		}
-
-		/*
-		 * if (userValue == 1) { //System.out.
-		 * println("You have chosen hunger. Enter hunger level below. Hunger Level: 1=Starving; 2=Satsified; 3=Full"
-		 * );
-		 * 
-		 * int userHungerLevel = input.nextInt(); myPet.hunger(userHungerLevel);
-		 * 
-		 * } else if (userValue == 2) {
-		 * System.out.println("You have chosen thirst. Enter thirst level below");
-		 * 
-		 * int userThirstLevel = input.nextInt(); myPet.thirst(userThirstLevel); } //
-		 * Finish conditions 3 - 5 else if (userValue == 3) { myPet.waste = myPet.waste
-		 * + 1;
-		 * 
-		 * } else if (userValue == 4) { myPet.boredom = myPet.boredom + 1;
-		 * 
-		 * } else if (userValue == 5) { myPet.excitement = myPet.excitement + 1; }
-		 */
 	}
-
 }
